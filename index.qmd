@@ -1,0 +1,50 @@
+---
+title: "MLOCDS-419-quarto-collaboration"
+comments:
+  giscus: 
+    repo: ngocuong0105/giscuss-quaro-collab
+---
+
+[Can I do collaborative editing with Quarto?](https://quarto.org/docs/faq/#can-i-do-collaborative-editing-with-quarto)
+
+# Solutions
+
+1. Comments in the end of the page [utterances](https://github.com/utterance/utterances): 7600 stars.
+2. Comments in the end of the page [gitalk](https://github.com/gitalk/gitalk): 6600 stars.
+3. Comments in the end of the page [giscus](https://github.com/giscus/giscus): 4500 stars.
+
+**utternaces** uses GitHub issues - whenever you post a comment, you'd get a GitHub issue issue automatically. This isn't really suitable for conversations and abuses Issues. Discussions are for conversations that need to be transparent and accessible but do not need to be tracked on a project board and are not related to code, unlike GitHub Issues.
+
+**gitalk** is similar to  utternaces and is based on GitHub issues.
+
+**giscus** is a comments widget built on GitHub Discussions. It's really similar to utterances. Basically, just replace Issues in utterances with Discussions and you get giscus. Harder to implement than utternaces
+
+## Features
+
+- Serverless, all comments will be stored as github issues/github discussion
+
+
+## User Requirements
+
+For all three solution we would need:
+- users to login their github account to authenticate with utternaces/gitalk/giscus.
+
+## Developement:
+1. Create our own GitHub app - see how in [wiki](https://yelpwiki.yelpcorp.com/pages/viewpage.action?pageId=124896344). Need `svc-github-admin` rights.
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="ngocuong0105/giscuss-quaro-collab"
+        data-repo-id="R_kgDOJYzx9A"
+        data-category="[ENTER CATEGORY NAME HERE]"
+        data-category-id="[ENTER CATEGORY ID HERE]"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

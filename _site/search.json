@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MLOCDS-419-quarto-collaboration",
+    "section": "",
+    "text": "Can I do collaborative editing with Quarto?"
+  },
+  {
+    "objectID": "index.html#features",
+    "href": "index.html#features",
+    "title": "MLOCDS-419-quarto-collaboration",
+    "section": "Features",
+    "text": "Features\n\nServerless, all comments will be stored as github issues/github discussion"
+  },
+  {
+    "objectID": "index.html#user-requirements",
+    "href": "index.html#user-requirements",
+    "title": "MLOCDS-419-quarto-collaboration",
+    "section": "User Requirements",
+    "text": "User Requirements\nFor all three solution we would need: - users to login their github account to authenticate with utternaces/gitalk/giscus."
+  },
+  {
+    "objectID": "index.html#developement",
+    "href": "index.html#developement",
+    "title": "MLOCDS-419-quarto-collaboration",
+    "section": "Developement:",
+    "text": "Developement:\n\nCreate our own GitHub app - see how in wiki. Need svc-github-admin rights."
+  },
+  {
+    "objectID": "listing.html",
+    "href": "listing.html",
+    "title": "Listing Example",
+    "section": "",
+    "text": "About\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nMLOCDS-419-quarto-collaboration\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

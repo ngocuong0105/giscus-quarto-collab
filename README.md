@@ -1,1 +1,1 @@
-# giscuss-quaro-collab
+# giscus-quarto-collab

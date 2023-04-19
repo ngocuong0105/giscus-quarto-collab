@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "MLOCDS-419-quarto-collab"
+  navbar:
+    background: "#e83030"
+    left:
+      - text: "Lists"
+        href: listing.qmd
+    right:
+      - icon: "github"
+    tools:
+      - icon: github
+        href: https://github.yelpcorp.com/misc/ad_hoc_data_science
+        text: GitHub
+  page-navigation: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+
+
