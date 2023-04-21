@@ -2,39 +2,48 @@
 title: "MLOCDS-419-quarto-collaboration"
 comments:
   giscus: 
-    repo: ngocuong0105/giscuss-quaro-collab
+    repo: ngocuong0105/giscus-quarto-collab
+  hypothesis: true
 ---
 
 [Can I do collaborative editing with Quarto?](https://quarto.org/docs/faq/#can-i-do-collaborative-editing-with-quarto)
 
 # Solutions
 
-1. Comments in the end of the page [utterances](https://github.com/utterance/utterances): 7600 stars.
-2. Comments in the end of the page [gitalk](https://github.com/gitalk/gitalk): 6600 stars.
-3. Comments in the end of the page [giscus](https://github.com/giscus/giscus): 4500 stars.
+Quarto supports out of the box comments in the end of the page:
 
-**utternaces** uses GitHub issues - whenever you post a comment, you'd get a GitHub issue issue automatically. This isn't really suitable for conversations and abuses Issues. Discussions are for conversations that need to be transparent and accessible but do not need to be tracked on a project board and are not related to code, unlike GitHub Issues.
+1. [utterances](https://github.com/utterance/utterances): 7600 stars.
+2. [giscus](https://github.com/giscus/giscus): 4500 stars.
+3. [hypothesis](https://github.com/gitalk/gitalk): 6600 stars.
 
-**gitalk** is similar to  utternaces and is based on GitHub issues.
-
-**giscus** is a comments widget built on GitHub Discussions. It's really similar to utterances. Basically, just replace Issues in utterances with Discussions and you get giscus. Harder to implement than utternaces
 
 ## Features
 
-- Serverless, all comments will be stored as github issues/github discussion
+**utterances** uses GitHub issues - whenever you post a comment, you'd get a GitHub issue issue automatically. This isn't really suitable for conversations and abuses Issues. Discussions are for conversations that need to be transparent and accessible but do not need to be tracked on a project board and are not related to code, unlike GitHub Issues.
 
+- Serverless, all comments will be stored as github issues
+
+**giscus** is a comments widget built on GitHub Discussions. It's really similar to utterances. Basically, just replace Issues in utterances with Discussions and you get giscus. Harder to implement than utternaces
+
+- Serverless, all comments will be stored as github discussion
+
+**hypothesis**  is proprietary tool and would require users to login with Hypothes.is account to add comments.
+
+
+**giscus is probably the best option out of the three.**  
 
 ## User Requirements
 
-For all three solution we would need:
 - users to login their github account to authenticate with utternaces/gitalk/giscus.
 
-## Developement:
+## Developement
 1. Create our own GitHub app - see how in [wiki](https://yelpwiki.yelpcorp.com/pages/viewpage.action?pageId=124896344). Need `svc-github-admin` rights.
-
+2. Add app to `misc`.
+3. Enable Discussions in `misc`.
+4. Add HTML snippet in Quarto files.
 
 <script src="https://giscus.app/client.js"
-        data-repo="ngocuong0105/giscuss-quaro-collab"
+        data-repo="ngocuong0105/giscus-quarto-collab"
         data-repo-id="R_kgDOJYzx9A"
         data-category="[ENTER CATEGORY NAME HERE]"
         data-category-id="[ENTER CATEGORY ID HERE]"
@@ -43,7 +52,7 @@ For all three solution we would need:
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="preferred_color_scheme"
+        data-theme="light"
         data-lang="en"
         crossorigin="anonymous"
         async>

@@ -6,8 +6,10 @@ website:
   navbar:
     background: "#e83030"
     left:
-      - text: "Lists"
+      - text: "Listing"
         href: listing.qmd
+      - text: "About"
+        href: about.qmd 
     right:
       - icon: "github"
     tools:
@@ -22,4 +24,6 @@ format:
     toc: true
 
 
-
+comments:
+  giscus: 
+    repo: ngocuong0105/giscus-quarto-collab

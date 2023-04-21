@@ -58,6 +58,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 
 
 </head>
@@ -80,12 +81,16 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./listing.html">
- <span class="menu-text">Lists</span></a>
+ <span class="menu-text">Listing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.yelpcorp.com/misc/ad_hoc_data_science"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.yelpcorp.com/misc/ad_hoc_data_science"><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -108,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
   <li><a href="#user-requirements" id="toc-user-requirements" class="nav-link" data-scroll-target="#user-requirements">User Requirements</a></li>
-  <li><a href="#developement" id="toc-developement" class="nav-link" data-scroll-target="#developement">Developement:</a></li>
+  <li><a href="#developement" id="toc-developement" class="nav-link" data-scroll-target="#developement">Developement</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -136,30 +141,40 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://quarto.org/docs/faq/#can-i-do-collaborative-editing-with-quarto">Can I do collaborative editing with Quarto?</a></p>
 <section id="solutions" class="level1">
 <h1>Solutions</h1>
+<p>Quarto supports out of the box comments in the end of the page:</p>
 <ol type="1">
-<li>Comments in the end of the page <a href="https://github.com/utterance/utterances">utterances</a>: 7600 stars.</li>
-<li>Comments in the end of the page <a href="https://github.com/gitalk/gitalk">gitalk</a>: 6600 stars.</li>
-<li>Comments in the end of the page <a href="https://github.com/giscus/giscus">giscus</a>: 4500 stars.</li>
+<li><a href="https://github.com/utterance/utterances">utterances</a>: 7600 stars.</li>
+<li><a href="https://github.com/giscus/giscus">giscus</a>: 4500 stars.</li>
+<li><a href="https://github.com/gitalk/gitalk">hypothesis</a>: 6600 stars.</li>
 </ol>
-<p><strong>utternaces</strong> uses GitHub issues - whenever you post a comment, you’d get a GitHub issue issue automatically. This isn’t really suitable for conversations and abuses Issues. Discussions are for conversations that need to be transparent and accessible but do not need to be tracked on a project board and are not related to code, unlike GitHub Issues.</p>
-<p><strong>gitalk</strong> is similar to utternaces and is based on GitHub issues.</p>
-<p><strong>giscus</strong> is a comments widget built on GitHub Discussions. It’s really similar to utterances. Basically, just replace Issues in utterances with Discussions and you get giscus. Harder to implement than utternaces</p>
 <section id="features" class="level2">
 <h2 class="anchored" data-anchor-id="features">Features</h2>
+<p><strong>utterances</strong> uses GitHub issues - whenever you post a comment, you’d get a GitHub issue issue automatically. This isn’t really suitable for conversations and abuses Issues. Discussions are for conversations that need to be transparent and accessible but do not need to be tracked on a project board and are not related to code, unlike GitHub Issues.</p>
 <ul>
-<li>Serverless, all comments will be stored as github issues/github discussion</li>
+<li>Serverless, all comments will be stored as github issues</li>
 </ul>
+<p><strong>giscus</strong> is a comments widget built on GitHub Discussions. It’s really similar to utterances. Basically, just replace Issues in utterances with Discussions and you get giscus. Harder to implement than utternaces</p>
+<ul>
+<li>Serverless, all comments will be stored as github discussion</li>
+</ul>
+<p><strong>hypothesis</strong> is proprietary tool and would require users to login with Hypothes.is account to add comments.</p>
+<p><strong>giscus is probably the best option out of the three.</strong></p>
 </section>
 <section id="user-requirements" class="level2">
 <h2 class="anchored" data-anchor-id="user-requirements">User Requirements</h2>
-<p>For all three solution we would need: - users to login their github account to authenticate with utternaces/gitalk/giscus.</p>
+<ul>
+<li>users to login their github account to authenticate with utternaces/gitalk/giscus.</li>
+</ul>
 </section>
 <section id="developement" class="level2">
-<h2 class="anchored" data-anchor-id="developement">Developement:</h2>
+<h2 class="anchored" data-anchor-id="developement">Developement</h2>
 <ol type="1">
 <li>Create our own GitHub app - see how in <a href="https://yelpwiki.yelpcorp.com/pages/viewpage.action?pageId=124896344">wiki</a>. Need <code>svc-github-admin</code> rights.</li>
+<li>Add app to <code>misc</code>.</li>
+<li>Enable Discussions in <code>misc</code>.</li>
+<li>Add HTML snippet in Quarto files.</li>
 </ol>
-<script src="https://giscus.app/client.js" data-repo="ngocuong0105/giscuss-quaro-collab" data-repo-id="R_kgDOJYzx9A" data-category="[ENTER CATEGORY NAME HERE]" data-category-id="[ENTER CATEGORY ID HERE]" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
+<script src="https://giscus.app/client.js" data-repo="ngocuong0105/giscus-quarto-collab" data-repo-id="R_kgDOJYzx9A" data-category="[ENTER CATEGORY NAME HERE]" data-category-id="[ENTER CATEGORY ID HERE]" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 
 
@@ -300,7 +315,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="ngocuong0105/giscuss-quaro-collab" data-repo-id="R_kgDOJYzx9A" data-category="General" data-category-id="DIC_kwDOJYzx9M4CV5MJ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+<script src="https://giscus.app/client.js" data-repo="ngocuong0105/giscus-quarto-collab" data-repo-id="R_kgDOJYzx9A" data-category="General" data-category-id="DIC_kwDOJYzx9M4CV5MJ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 

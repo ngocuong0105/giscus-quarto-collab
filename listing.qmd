@@ -1,4 +1,5 @@
 ---
 title: "Listing Example"
 listing: default
+comments: false
 ---
